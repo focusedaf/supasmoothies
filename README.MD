@@ -17,9 +17,3 @@ An extended version of [The Net Ninja's](https://www.youtube.com/playlist?list=P
 - Supabase (Database + Auth + Storage)
 
 
-## Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/supasmoothies.git
-   cd supasmoothies
