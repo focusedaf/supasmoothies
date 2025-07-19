@@ -16,7 +16,7 @@ const SmoothieCard = ({ smoothie, onDelete }) => {
   }, []);
 
   const handleDelete = async () => {
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from("smoothies")
       .delete()
       .eq("id", smoothie.id)
