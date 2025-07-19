@@ -1,6 +1,6 @@
 # SupaSmoothies
 
-An extended version of [The Net Ninja's](https://www.youtube.com/playlist?list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ) SupaSmoothies CRUD app built with React and Supabase.
+An extended version of [The Net Ninja's](https://youtube.com/playlist?list=PL4cUxeGkcC9hUb6sHthUEwG7r9VDPBMKO&si=Ywi-78KMlpRxtJu1) SupaSmoothies CRUD app built with React and Supabase.
 
 
 ## Features
