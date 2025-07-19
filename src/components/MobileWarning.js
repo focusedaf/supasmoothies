@@ -21,7 +21,7 @@ const MobileWarning = () => (
     role="alert"
     aria-live="assertive"
   >
-    <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
+    <h2 style={{ fontSize: "1rem", marginBottom: "1rem" }}>
      mobile pe mat khol bc
     </h2>
     <span style={{ fontSize: "1rem" }}>
