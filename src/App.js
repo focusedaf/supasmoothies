@@ -11,16 +11,26 @@ import supabase from "./config/supabaseClient";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 500);
+      const isSmallScreen = window.innerWidth <= 500;
+      const isLandscapeMobile =
+        /Mobi|Android|iPhone/i.test(navigator.userAgent) &&
+        window.innerWidth > window.innerHeight;
+      setIsMobile(isSmallScreen || isLandscapeMobile);
     };
 
     checkMobile();
     window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+    window.addEventListener("orientationchange", checkMobile);
 
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+      window.removeEventListener("orientationchange", checkMobile);
+    };
+  }, []);
+  
   const [user, setUser] = useState(null);
 
   // check session on load
