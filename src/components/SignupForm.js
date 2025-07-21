@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import supabase from "../config/supabaseClient";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SignupForm = () => {
   const [username, setUsername] = useState("");
@@ -9,7 +9,7 @@ const SignupForm = () => {
   const [msg, setMsg] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+ 
   
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ const SignupForm = () => {
       if (data) {
         console.log(data);
         setMsg("Signup Successful. Please check your email to confirm.");
-        navigate("/");
+         
       } else {
         setError(error.message);
       }
@@ -79,7 +79,7 @@ const SignupForm = () => {
       {msg && <p className="error">{msg}</p>}
       {error && <p className="error">{error}</p>}
       <p>
-        Alredy have an account? <Link to="/login">Login</Link>
+        Already have an account? <Link to="/login">Login</Link>
       </p>
     </form>
   );
